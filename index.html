@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snake</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="hud">
+        <h1>Snake</h1>
+        <p>Score: <span id="score">0</span></p>
+      </header>
+
+      <section class="game-wrap">
+        <canvas id="game" width="400" height="400" aria-label="Snake game board"></canvas>
+        <div id="game-over" class="overlay hidden" role="status" aria-live="polite">
+          <p>Game Over</p>
+          <button id="restart-btn" type="button">Restart</button>
+        </div>
+      </section>
+
+      <p class="hint">Use Arrow Keys or WASD. Press Space to pause/resume.</p>
+
+      <section class="controls" aria-label="Touch controls">
+        <button data-dir="up" type="button">Up</button>
+        <div class="controls-row">
+          <button data-dir="left" type="button">Left</button>
+          <button data-dir="down" type="button">Down</button>
+          <button data-dir="right" type="button">Right</button>
+        </div>
+      </section>
+
+      <button id="restart-inline" class="restart-inline" type="button">Restart</button>
+    </main>
+
+    <script type="module" src="./snake-game.js"></script>
+  </body>
+</html>
